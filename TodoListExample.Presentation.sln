@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListExample.Presentation", "TodoListExample.Presentation\TodoListExample.Presentation.csproj", "{E9A4EA0C-6553-4DC7-8DBA-209973B86B2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListExample.Presentation", "TodoListExample.Presentation\TodoListExample.Presentation.csproj", "{E9A4EA0C-6553-4DC7-8DBA-209973B86B2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListExample.Core", "TodoListExample.Core\TodoListExample.Core.csproj", "{12CB466C-E457-4174-AAF4-34B73DA9FA9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListExample.Core", "TodoListExample.Core\TodoListExample.Core.csproj", "{12CB466C-E457-4174-AAF4-34B73DA9FA9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListExample.Application", "TodoListExample.Application\TodoListExample.Application.csproj", "{307EDBAA-5103-4605-A411-C3E38818C8AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListExample.Application", "TodoListExample.Application\TodoListExample.Application.csproj", "{307EDBAA-5103-4605-A411-C3E38818C8AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoListExample.Infrastructure", "TodoListExample.Infrastructure\TodoListExample.Infrastructure.csproj", "{B373DA2D-00FA-411F-94BF-747379A9ED99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListExample.Infrastructure", "TodoListExample.Infrastructure\TodoListExample.Infrastructure.csproj", "{B373DA2D-00FA-411F-94BF-747379A9ED99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{16750185-B0E8-434E-A3BC-0345F7F48257}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D5F70489-9478-4663-A4E0-36B284C2BA0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.UnitTests", "Core.UnitTests\Core.UnitTests.csproj", "{B7C1A5E7-0D4F-419E-AD09-4A512F5AA0F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,20 @@ Global
 		{B373DA2D-00FA-411F-94BF-747379A9ED99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B373DA2D-00FA-411F-94BF-747379A9ED99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B373DA2D-00FA-411F-94BF-747379A9ED99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C1A5E7-0D4F-419E-AD09-4A512F5AA0F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C1A5E7-0D4F-419E-AD09-4A512F5AA0F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C1A5E7-0D4F-419E-AD09-4A512F5AA0F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C1A5E7-0D4F-419E-AD09-4A512F5AA0F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9A4EA0C-6553-4DC7-8DBA-209973B86B2E} = {16750185-B0E8-434E-A3BC-0345F7F48257}
+		{12CB466C-E457-4174-AAF4-34B73DA9FA9B} = {16750185-B0E8-434E-A3BC-0345F7F48257}
+		{307EDBAA-5103-4605-A411-C3E38818C8AE} = {16750185-B0E8-434E-A3BC-0345F7F48257}
+		{B373DA2D-00FA-411F-94BF-747379A9ED99} = {16750185-B0E8-434E-A3BC-0345F7F48257}
+		{B7C1A5E7-0D4F-419E-AD09-4A512F5AA0F4} = {D5F70489-9478-4663-A4E0-36B284C2BA0E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3B3B9DF0-BF5D-4B80-B581-561D76903060}

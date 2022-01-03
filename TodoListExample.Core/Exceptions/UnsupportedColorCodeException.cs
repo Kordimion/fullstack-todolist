@@ -2,15 +2,15 @@
 
 namespace TodoListExample.Core.Exceptions;
 
-public class InvalidColorCode : Exception
+public class UnsupportedColorCodeException : Exception
 {
-    public InvalidColorCode() { }
+    public UnsupportedColorCodeException() { }
 
-    public InvalidColorCode(string message) : base(message) { }
+    public UnsupportedColorCodeException(string message) : base(message) { }
 
-    public InvalidColorCode(string message, Exception inner) : base(message, inner) { }
+    public UnsupportedColorCodeException(string message, Exception inner) : base(message, inner) { }
 
-    protected InvalidColorCode(
+    protected UnsupportedColorCodeException(
         SerializationInfo info,
         StreamingContext context) : base(info, context) { }
 }

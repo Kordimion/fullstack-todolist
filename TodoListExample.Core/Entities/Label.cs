@@ -1,5 +1,4 @@
 ﻿using TodoListExample.Core.Common;
-using TodoListExample.Core.Enums;
 using TodoListExample.Core.ValueObjects;
 
 namespace TodoListExample.Core.Entities;
@@ -10,7 +9,7 @@ public class Label : AuditableEntity
 
     public string? Name { get; set; }
 
-    public Color Color { get; set; } = new(ColorPalette.Amaranth);
+    public Color Color { get; set; } = new(Color.SupportedColorCode.Amaranth);
 
     public ICollection<Todo> LabeledTodos { get; set; } = new List<Todo>();
 }

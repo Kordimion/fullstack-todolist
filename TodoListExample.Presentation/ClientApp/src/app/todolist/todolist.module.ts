@@ -6,11 +6,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { SidebarSectionComponent } from '../sidebar-section/sidebar-section.component';
+import { SidebarSectionItemComponent } from '../sidebar-section-item/sidebar-section-item.component';
+import { MatExpansionModule } from '@angular/material/expansion'; 
 
 
 @NgModule({
   declarations: [
     TodolistRootComponent,
+    SidebarSectionComponent,
+    SidebarSectionItemComponent,
   ],
   imports: [
     CommonModule,
@@ -18,7 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatListModule,
     MatIconModule, 
-    MatButtonModule
+    MatButtonModule,
+    MatExpansionModule
   ],
   exports: [
     TodolistRootComponent

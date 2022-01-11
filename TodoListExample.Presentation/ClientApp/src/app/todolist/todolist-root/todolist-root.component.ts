@@ -16,6 +16,10 @@ export class TodolistRootComponent {
       shareReplay()
     );
 
+  stopPropagation(event: Event) {
+    event.stopPropagation();
+  }
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }

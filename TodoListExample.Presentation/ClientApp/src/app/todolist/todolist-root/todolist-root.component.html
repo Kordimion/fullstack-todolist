@@ -4,25 +4,50 @@
     aria-label="Toggle sidenav"
     mat-icon-button
     (click)="drawer.toggle()"
-    *ngIf="isHandset$ | async">
+    >
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>TodoList</span>
 </mat-toolbar>
 
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
+<mat-sidenav-container class="sidenav-container"
+      [hasBackdrop]="(isHandset$ | async)">
+
+  <mat-sidenav #drawer class="sidenav" 
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [mode]="(isHandset$ | async) ? 'push' : 'push'"
+      [class.sidenav-mobile]="(isHandset$ | async)"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <sidebar-section-item text="Inbox" icon="inbox"></sidebar-section-item>
     </mat-nav-list>
+    <sidebar-section name="Projects">
+      <div>
+        <sidebar-section-item text="Project 1" iconColor="#557688" icon="circle"></sidebar-section-item>
+        <sidebar-section-item text="Project 2" iconColor="#ffaacc" icon="circle"></sidebar-section-item>
+        <sidebar-section-item text="Project 3" iconColor="#11ff88" icon="circle"></sidebar-section-item>
+      </div>
+      <div options>
+        <button mat-icon-button aria-label="Create new project" [style.font-size]="'6px'" (click)="stopPropagation($event)">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </sidebar-section>
+    <sidebar-section name="Labels">
+      <div>
+        <sidebar-section-item text="Label 1" iconColor="#557688" icon="label"></sidebar-section-item>
+        <sidebar-section-item text="Label 2" iconColor="#ffaacc" icon="label"></sidebar-section-item>
+        <sidebar-section-item text="Label 3" iconColor="#11ff88" icon="label"></sidebar-section-item>
+      </div>
+      <div options>
+        <button mat-icon-button aria-label="Create new label" (click)="stopPropagation($event)">
+          <mat-icon>new_label</mat-icon>
+        </button>
+      </div>
+    </sidebar-section>
   </mat-sidenav>
   <mat-sidenav-content>
-    <!-- Add todolist Here -->
+
   </mat-sidenav-content>
 </mat-sidenav-container>
+

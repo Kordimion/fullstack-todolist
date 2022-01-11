@@ -20,31 +20,9 @@
       [opened]="(isHandset$ | async) === false">
     <mat-nav-list>
       <sidebar-section-item text="Inbox" icon="inbox"></sidebar-section-item>
+      <sidebar-projects-section></sidebar-projects-section>
+      <sidebar-labels-section></sidebar-labels-section>
     </mat-nav-list>
-    <sidebar-section name="Projects">
-      <div>
-        <sidebar-section-item text="Project 1" iconColor="#557688" icon="circle"></sidebar-section-item>
-        <sidebar-section-item text="Project 2" iconColor="#ffaacc" icon="circle"></sidebar-section-item>
-        <sidebar-section-item text="Project 3" iconColor="#11ff88" icon="circle"></sidebar-section-item>
-      </div>
-      <div options>
-        <button mat-icon-button aria-label="Create new project" [style.font-size]="'6px'" (click)="stopPropagation($event)">
-          <mat-icon>add</mat-icon>
-        </button>
-      </div>
-    </sidebar-section>
-    <sidebar-section name="Labels">
-      <div>
-        <sidebar-section-item text="Label 1" iconColor="#557688" icon="label"></sidebar-section-item>
-        <sidebar-section-item text="Label 2" iconColor="#ffaacc" icon="label"></sidebar-section-item>
-        <sidebar-section-item text="Label 3" iconColor="#11ff88" icon="label"></sidebar-section-item>
-      </div>
-      <div options>
-        <button mat-icon-button aria-label="Create new label" (click)="stopPropagation($event)">
-          <mat-icon>new_label</mat-icon>
-        </button>
-      </div>
-    </sidebar-section>
   </mat-sidenav>
   <mat-sidenav-content>
 

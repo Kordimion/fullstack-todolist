@@ -8,7 +8,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { SidebarSectionComponent } from '../sidebar-section/sidebar-section.component';
 import { SidebarSectionItemComponent } from '../sidebar-section-item/sidebar-section-item.component';
-import { MatExpansionModule } from '@angular/material/expansion'; 
+import { MatExpansionModule } from '@angular/material/expansion';
+import { SidebarLabelsSectionComponent } from '../sidebar-labels-section/sidebar-labels-section.component';
+import { SidebarProjectsSectionComponent } from '../sidebar-projects-section/sidebar-projects-section.component'; 
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     TodolistRootComponent,
     SidebarSectionComponent,
     SidebarSectionItemComponent,
+    SidebarLabelsSectionComponent,
+    SidebarProjectsSectionComponent,
   ],
   imports: [
     CommonModule,

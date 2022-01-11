@@ -6,11 +6,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { SidebarSectionComponent } from '../sidebar-section/sidebar-section.component';
-import { SidebarSectionItemComponent } from '../sidebar-section-item/sidebar-section-item.component';
+import { SidebarSectionComponent } from './sidebar/shared/sidebar-section/sidebar-section.component';
+import { SidebarSectionItemComponent } from './sidebar/shared/sidebar-section-item/sidebar-section-item.component';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { SidebarLabelsSectionComponent } from '../sidebar-labels-section/sidebar-labels-section.component';
-import { SidebarProjectsSectionComponent } from '../sidebar-projects-section/sidebar-projects-section.component'; 
+import { SidebarLabelsSectionComponent } from './sidebar/specific/sidebar-labels-section/sidebar-labels-section.component';
+import { SidebarProjectsSectionComponent } from './sidebar/specific/sidebar-projects-section/sidebar-projects-section.component'; 
 
 
 @NgModule({
